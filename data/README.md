@@ -1,0 +1,8 @@
+The rigid motion (_cars_, _chairs_, and _airplanes_) data and a version of the warping cars dataset are available for download. Note that this data can be quite large depending on the category, so please edit [`download_data.sh`](download_data.sh) to only download and unzip what you need. To download all datasets run:
+* `bash download_data.sh`
+
+If preferred, all datasets are also available to download manually from Google drive: [cars (11GB)](https://drive.google.com/file/d/1ib3mN51b4zYRk-3N4X5uuQN6FSflsw1k/view?usp=sharing), [chairs (21GB)](https://drive.google.com/file/d/1eMVNC1Ib6f-N-kV96lHVdCkwBHWkBNHm/view?usp=sharing), [airplanes (15GB)](https://drive.google.com/file/d/1RhvdP1JxC_DG8ivnRJ1dOI3eTl3IKJg0/view?usp=sharing), and [warping cars (22GB)](https://drive.google.com/file/d/1m3_gbY_XgTWyscDb9WNYihM9-vYk2YKx/view?usp=sharing).
+
+The provided warping cars dataset (`warping_cars_full_cat_8k`) is not the exact same as the one used in the paper, but should functionally be no different for training CaSPR: to make it a reasonable size to host and download, this version of the dataset contains 8k points sampled on the surface of the object at each frame of every sequence (rather than 100k as in the original data used to compare to OFlow). The number of points is the only difference between this and the original dataset, the car models and motion sequences used are identical.
+
+Configurations for each dataset that are passed into the training/testing scripts are located in [`configs`](configs). By default, these should not need to be changed.
